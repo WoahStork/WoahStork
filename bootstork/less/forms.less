@@ -1,0 +1,182 @@
+/**************** 
+	Material Design search fields 
+	************************/
+.group, .form-group{
+
+  position:relative; 
+  margin-bottom:45px; 
+}
+input.form-control				{
+ /* font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;*/
+}
+/*******BUTTONS **********/
+
+.btn-success,btn-primary{
+	background:@green;
+	border:none;
+	.trans;
+	&:hover{
+		background:@orange;
+		.trans;
+		border:none;
+	}
+}
+input:focus 		{ outline:none; }
+input.xform-control{
+	border:none;
+  background-color: transparent;
+	border-bottom:2px solid #757575;
+	border-radius:0;
+	box-shadow: none !important;
+	  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+	&:focus{
+		box-shadow:none !important;
+		-webkit-box-shadow:none;
+		-moz-box-shadow:none;
+		border-bottom:4px solid @green;
+		  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+		.bar;
+	}
+	&:focus + label{
+		color:@green;
+	}
+}
+/* LABEL ======================================= */
+.xlabel 				 {
+	color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+ top:-20px;
+  font-size:14px;
+  color:#5264AE;
+  
+}
+/* Check Boxes ================================= */
+
+input[type=checkbox].form-control{
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-box-shadow:none;
+}
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  .feature-cool;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+ // width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.xhighlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+/*********** END MATERIAL DESIGN CODE ********/
+
+/*Strains Page search form elements 3======================>* * * */
+#views-exposed-form-strains-page .views-exposed-form {
+    margin: 10px 200px;
+    .views-exposed-widget {
+      padding: .5em 1em 0 0;
+  }
+}
+.form-type-bef-checkbox {
+    display: inline-block;
+    margin: 0 20px;
+}
+div#edit-title-wrapper {
+    float: none;
+}
+div#edit-field-type-tid-wrapper {
+    width: 50%;
+    float: left;
+}
+.views-exposed-widget.views-submit-button {
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+.form-control.form-checkboxes.bef-select-as-checkboxes {
+    display: block;
+    height: inherit;
+    background-color: transparent;
+     border: none;  //uncomment these 3 lines to get rid of the border stuff around the checkboxes
+     position: relative; 
+     box-shadow: none; 
+    &.highlight {
+	    position: relative;
+	    height: inherit;
+	    width: inherit;
+	}
+}
+legend.panel-heading{
+	text-transform: uppercase;
+	color:white;
+	.feature-cool;
+}
+input[type='checkbox'].form-control:focus {
+    width: 40px;
+}
